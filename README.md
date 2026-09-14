@@ -51,6 +51,22 @@ cp -r Phokawin-skills/skills/*/* ~/.claude/skills/
 ### `skills/engineering/`
 
 - **[`refactor`](skills/engineering/refactor/SKILL.md)** — ปรับโครงสร้างโค้ดโดยไม่เปลี่ยนพฤติกรรม จุดเด่นคือ **Gate 0**: ต้องหา test/type/lint command ของโปรเจกต์จริง เช็กว่าโค้ดเป้าหมายมีเทสต์คุมจริงไหม และรัน baseline เก็บผลก่อนแตะโค้ด ถ้าไม่มีเทสต์หรือ baseline แดง → หยุดและเสนอทางเลือก มีเพดานขอบเขต 5 ไฟล์ / 400 บรรทัดต่อรอบ, commit ทีละ refactoring, ห้าม `git add -A`, และเทสต์แดงหลังแก้ = revert ไม่ใช่แก้จนเขียว
+- **[`git-commit`](skills/engineering/git-commit/SKILL.md)** — วิเคราะห์ diff จริง จัดกลุ่มไฟล์ที่ stage และเขียนข้อความ Conventional Commit
+- **[`spec-to-tasks`](skills/engineering/spec-to-tasks/SKILL.md)** — สรุปบทสนทนาเป็น Technical Spec แล้วแตกเป็น checklist งานแบบ tracer-bullet พร้อมลำดับก่อนหลัง (user เรียกเอง)
+- **[`post-mortem`](skills/engineering/post-mortem/SKILL.md)** — บันทึก root cause, กลไกของบั๊ก, การยืนยัน และการป้องกัน ลง `docs/post-mortems/<date>-<slug>.md`
+- **[`karpathy-guidelines`](skills/engineering/karpathy-guidelines/SKILL.md)** — Think before coding, Simplicity first, Surgical changes, Goal-driven execution
+- **[`scrutinize`](skills/engineering/scrutinize/SKILL.md)** — รีวิว plan / PR / diff จากมุมมองคนนอก ตั้งคำถามว่ามีวิธีง่ายกว่านี้ไหม และไล่ code path จริงไม่ใช่ดูแค่ diff
+- **[`debug-mantra`](skills/engineering/debug-mantra/SKILL.md)** — วินัยดีบัก 4 ขั้น: reproduce, หา fail path, หักล้างสมมติฐาน, บันทึกทุกการทดลอง
+
+### `skills/productivity/`
+
+- **[`caveman`](skills/productivity/caveman/SKILL.md)** — โหมดตอบสั้นขั้นสุด ตัดคำฟุ่มเฟือยแต่คงความถูกต้องทางเทคนิค ประหยัด token
+- **[`find-skills`](skills/productivity/find-skills/SKILL.md)** — ค้นหาและติดตั้งสกิลจาก [skills.sh](https://skills.sh)
+- **[`grill-me`](skills/productivity/grill-me/SKILL.md)** — สัมภาษณ์เค้นความคิดแบบ Socratic จบในแชต ไม่สร้างไฟล์ (user เรียกเอง)
+- **[`grill-with-docs`](skills/productivity/grill-with-docs/SKILL.md)** — สัมภาษณ์เค้น requirement สำหรับโปรเจกต์จริง บันทึกลง `CONTEXT.md` และ `docs/adr/` (user เรียกเอง)
+- **[`handoff`](skills/productivity/handoff/SKILL.md)** — สรุปสถานะงานลง OS temp directory เพื่อส่งต่อให้เซสชันถัดไป ตัด secrets ทิ้ง (user เรียกเอง)
+
+สกิลทั้งหมดยกเว้น `refactor` คัดลอกมาจาก [Rachapol03/Rachapol-skills](https://github.com/Rachapol03/Rachapol-skills) โดยไม่แก้ไข ดูแหล่งต้นทางและ copyright ได้ที่ [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
 
 ---
 
@@ -75,4 +91,4 @@ disable-model-invocation: true   # ใส่เฉพาะสกิลที่
 
 ## License
 
-MIT — ดู [LICENSE](LICENSE)
+MIT — ดู [LICENSE](LICENSE) และ [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) สำหรับสกิลจากแหล่งอื่น
